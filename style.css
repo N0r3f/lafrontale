@@ -167,13 +167,13 @@ span:nth-child(3) {
     }
     39% {
         opacity: 100%;
-        z-index: 3;
+        z-index: 2;
     }
     90% {
         -webkit-transform: rotate(1deg) scale(1.1);
                 transform: rotate(1deg) scale(1.1);
         opacity: 100%;
-        z-index: 2;
+        z-index: 1;
     }
     91% {
         opacity: 100%;
@@ -217,16 +217,17 @@ span:nth-child(3) {
     }
     39% {
         opacity: 100%;
-        z-index: 3;
+        z-index: 2;
     }
     90% {
+        opacity: 0;
         -webkit-transform: rotate(1deg) scale(1.1);
                 transform: rotate(1deg) scale(1.1);
         opacity: 100%;
-        z-index: 2;
+        z-index: 1;
     }
     91% {
-        opacity: 100%;
+        opacity: 0;
         -webkit-filter: saturate(0.2) blur(60px);
                 filter: saturate(0.2) blur(60px);
         z-index: -1;
