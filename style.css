@@ -238,13 +238,13 @@ span:nth-child(3) {
         opacity: 100%;
         z-index: 3;
     }
-    70% {
+    40% {
         -webkit-transform: rotate(1deg) scale(1.1);
                 transform: rotate(1deg) scale(1.1);
         opacity: 100%;
         z-index: 3;
     }
-    71% {
+    41% {
         opacity: 100%;
         -webkit-filter: saturate(0.2) blur(60px);
                 filter: saturate(0.2) blur(60px);
@@ -333,7 +333,7 @@ span:nth-child(3) {
 }
 @media screen and (max-width: 750px) {
     body {
-        scrollbar-width: 0;
+        height: 100vh;
     }
     span {
         width: 80%;
