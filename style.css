@@ -272,13 +272,13 @@ span:nth-child(3) {
                 filter: saturate(.2);
         z-index: 3;
     }
-    91% {
+    51% {
         opacity: 100%;
         -webkit-transform: scale(.7);
                 transform: scale(.7);
         z-index: 3;
     }
-    98% {
+    58% {
         opacity: 100%;
         -webkit-filter: saturate(1.9);
                 filter: saturate(1.9);
