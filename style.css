@@ -1,22 +1,49 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100vw;
     height: 100vh;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: -o-radial-gradient(hsl(0, 0%, 9%), hsl(0, 0%, 2%));
     background: radial-gradient(hsl(0, 0%, 9%), hsl(0, 0%, 2%));
-        overflow: hidden;
+    overflow: hidden;
     z-index: 0;
 }
 span {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -32,6 +59,19 @@ span {
     background-clip: text;
     -webkit-background-clip: text;
     text-rendering: optimizeSpeed;
+    background-image: -o-linear-gradient(
+        45deg,
+        hsl(256deg 100% 37%) 0%,
+        hsl(291deg 100% 34%) 11%,
+        hsl(315deg 100% 39%) 21%,
+        hsl(329deg 100% 46%) 32%,
+        hsl(337deg 100% 50%) 43%,
+        hsl(352deg 100% 59%) 54%,
+        hsl(15deg 100% 60%) 65%,
+        hsl(31deg 100% 55%) 77%,
+        hsl(42deg 100% 53%) 89%,
+        hsl(50deg 100% 58%) 100%
+      );
     background-image: linear-gradient(
         45deg,
         hsl(256deg 100% 37%) 0%,
@@ -47,14 +87,45 @@ span {
       );
 }
 span:nth-child(1) {
-    animation: 5s ease etat1 infinite;
+    -webkit-animation: 5s ease etat1 infinite;
+            animation: 5s ease etat1 infinite;
 }
 span:nth-child(2) {
-    animation: 5s ease etat2 infinite;
+    -webkit-animation: 5s ease etat2 infinite;
+            animation: 5s ease etat2 infinite;
 }
 span:nth-child(3) {
-    animation: 5s ease etat3 infinite;
+    -webkit-animation: 5s ease etat3 infinite;
+            animation: 5s ease etat3 infinite;
     font-size: 2.5em;
+}
+@-webkit-keyframes etat1 {
+    from {
+        opacity: 100%;
+        z-index: 3;
+    }
+    20% {
+        opacity: 100%;
+        margin-left: 1%;
+        font-weight: bolder;
+        z-index: 3;    
+    }
+    99% {
+        opacity: 0;
+        -webkit-filter: blur(58px);
+                filter: blur(58px);
+        z-index: -1;
+    }
+    98% {
+    }
+    99% {
+        opacity: 0;
+        z-index: -1;
+    }
+    to {
+        opacity: 100%;
+        z-index: -1;
+    }
 }
 @keyframes etat1 {
     from {
@@ -69,7 +140,8 @@ span:nth-child(3) {
     }
     99% {
         opacity: 0;
-        filter: blur(58px);
+        -webkit-filter: blur(58px);
+                filter: blur(58px);
         z-index: -1;
     }
     98% {
@@ -83,41 +155,137 @@ span:nth-child(3) {
         z-index: -1;
     }
 }
-@keyframes etat2 {
+@-webkit-keyframes etat2 {
     from {
         opacity: 0;
         z-index: -1;
     }
     21% {
-        filter: blur(8px);
+        -webkit-filter: blur(8px);
+                filter: blur(8px);
     }
     23% {
         opacity: 0;
-        transform: rotate(-0.2deg);
-        transform: scale(.7);
+        -webkit-transform: rotate(-0.2deg);
+                transform: rotate(-0.2deg);
+        -webkit-transform: scale(.7);
+                transform: scale(.7);
         z-index: -1;
     }
     24% {
-        transform: rotate(0.2deg);
+        -webkit-transform: rotate(0.2deg);
+                transform: rotate(0.2deg);
         opacity: 100%;
         z-index: 3;
     }
     30% {
-        transform: rotate(-0.1deg);
-        filter: saturate(1.2);
+        -webkit-transform: rotate(-0.1deg);
+                transform: rotate(-0.1deg);
+        -webkit-filter: saturate(1.2);
+                filter: saturate(1.2);
     }
     39% {
         opacity: 100%;
         z-index: 3;
     }
     70% {
-        transform: rotate(1deg) scale(1.1);
+        -webkit-transform: rotate(1deg) scale(1.1);
+                transform: rotate(1deg) scale(1.1);
         opacity: 100%;
         z-index: 3;
     }
     71% {
         opacity: 100%;
-        filter: saturate(0.2) blur(60px);
+        -webkit-filter: saturate(0.2) blur(60px);
+                filter: saturate(0.2) blur(60px);
+        z-index: -1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@keyframes etat2 {
+    from {
+        opacity: 0;
+        z-index: -1;
+    }
+    21% {
+        -webkit-filter: blur(8px);
+                filter: blur(8px);
+    }
+    23% {
+        opacity: 0;
+        -webkit-transform: rotate(-0.2deg);
+                transform: rotate(-0.2deg);
+        -webkit-transform: scale(.7);
+                transform: scale(.7);
+        z-index: -1;
+    }
+    24% {
+        -webkit-transform: rotate(0.2deg);
+                transform: rotate(0.2deg);
+        opacity: 100%;
+        z-index: 3;
+    }
+    30% {
+        -webkit-transform: rotate(-0.1deg);
+                transform: rotate(-0.1deg);
+        -webkit-filter: saturate(1.2);
+                filter: saturate(1.2);
+    }
+    39% {
+        opacity: 100%;
+        z-index: 3;
+    }
+    70% {
+        -webkit-transform: rotate(1deg) scale(1.1);
+                transform: rotate(1deg) scale(1.1);
+        opacity: 100%;
+        z-index: 3;
+    }
+    71% {
+        opacity: 100%;
+        -webkit-filter: saturate(0.2) blur(60px);
+                filter: saturate(0.2) blur(60px);
+        z-index: -1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@-webkit-keyframes etat3 {
+    from {
+        opacity: 0;
+        -webkit-filter: blur(8px);
+                filter: blur(8px);
+        z-index: -1;
+    }
+    40% {
+        opacity: 0;
+        z-index: -1;
+    }
+    49% {
+        opacity: 100%;
+        -webkit-filter: saturate(.2);
+                filter: saturate(.2);
+        z-index: 3;
+    }
+    91% {
+        opacity: 100%;
+        -webkit-transform: scale(.7);
+                transform: scale(.7);
+        z-index: 3;
+    }
+    98% {
+        opacity: 100%;
+        -webkit-filter: saturate(1.9);
+                filter: saturate(1.9);
+        z-index: 3;
+    }
+    99% {
+        opacity: 0;
         z-index: -1;
     }
     to {
@@ -128,7 +296,8 @@ span:nth-child(3) {
 @keyframes etat3 {
     from {
         opacity: 0;
-        filter: blur(8px);
+        -webkit-filter: blur(8px);
+                filter: blur(8px);
         z-index: -1;
     }
     40% {
@@ -137,17 +306,20 @@ span:nth-child(3) {
     }
     49% {
         opacity: 100%;
-        filter: saturate(.2);
+        -webkit-filter: saturate(.2);
+                filter: saturate(.2);
         z-index: 3;
     }
     91% {
         opacity: 100%;
-        transform: scale(.7);
+        -webkit-transform: scale(.7);
+                transform: scale(.7);
         z-index: 3;
     }
     98% {
         opacity: 100%;
-        filter: saturate(1.9);
+        -webkit-filter: saturate(1.9);
+                filter: saturate(1.9);
         z-index: 3;
     }
     99% {
@@ -159,9 +331,14 @@ span:nth-child(3) {
         z-index: -1;
     }
 }
-@media screen and (min-width: 750px) {
+@media screen and (max-width: 750px) {
+    body {
+        scrollbar-width: 0;
+    }
     span {
-        font-size: 8em;
+        width: 80%;
+        height: 80%;
+        font-size: 2.5em;
     }
 }
 @media screen and (min-width: 1000px) {
